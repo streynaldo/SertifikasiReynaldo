@@ -56,7 +56,7 @@ class BookController extends Controller
             'description' => ['required'],
             'categories' => ['required', 'array'],
             'categories.*' => ['exists:categories,id'],
-            'cover_photo' => ['image', 'mimes:jpeg,png,jpg', 'max:2048'],
+            'cover_photo' => ['required','image', 'mimes:jpeg,png,jpg', 'max:2048'],
         ]);
 
         $book = Book::where('title', $data['title'])->first();
