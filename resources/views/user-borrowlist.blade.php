@@ -8,9 +8,6 @@
         @endif
         <div class="flex flex-row mb-5 justify-between w-full">
             <h1 class="text-bold text-4xl">List Book</h1>
-            <a href="{{ route('books.create') }}"
-                class="px-3 py-2 text-sm text-end font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">Tambah
-                Buku</a>
         </div>
         <div class="w-full overflow-x-auto">
             <table class="w-full text-sm text-left rtl:text-right text-gray-500">

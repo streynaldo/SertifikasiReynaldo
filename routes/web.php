@@ -18,7 +18,7 @@ Route::post('/logout', [AuthController::class, 'Logout'])->name('logout');
 Route::middleware(['user'])->group(function () {
     Route::get('/', function () {
         return view('home');
-    });
+    })->name('home');
     Route::get('/book-list', [UserViewController::class, 'index'])->name('book-list');
     Route::get('/book-list/borrow-list', [UserViewController::class, 'borrowList'])->name('borrow-list');
     Route::put('/book-list/borrow/{id}', [UserViewController::class, 'borrow'])->name('borrow');
@@ -33,5 +33,4 @@ Route::middleware(['admin'])->group(function () {
     Route::resource('users', UserController::class);
     Route::resource('books', BookController::class);
     Route::resource('categories', CategoryController::class);
-
 });
